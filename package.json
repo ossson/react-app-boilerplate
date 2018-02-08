@@ -1,5 +1,5 @@
 {
-  "name": "foreman.core",
+  "name": "react-app-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "/src/index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ossson/foreman.core.git"
+    "url": "git+https://github.com/ossson/react-app-boilerplate.git"
   },
   "author": "Miguel Morales",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ossson/foreman.core/issues"
+    "url": "https://github.com/ossson/react-app-boilerplate/issues"
   },
-  "homepage": "https://github.com/ossson/foreman.core#readme"
+  "homepage": "https://github.com/ossson/react-app-boilerplate#readme"
 }
