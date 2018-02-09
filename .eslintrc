@@ -1,1 +1,21 @@
-
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react", "flowtype", "flowtype-errors"
+  ],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:flowtype/recommended"],
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true,
+    "jasmine": true
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  },
+  "rules": {
+    "flowtype-errors/show-errors": 2
+  }
+}
