@@ -22,14 +22,14 @@ vorpal
  */
 vorpal
   .command('clear')
-  .action(function (args, cbk) {
+  .action(function (args, callback) {
     let blank = ''
     for (let i = 0; i < process.stdout.rows; ++i) {
       blank += '\n'
     }
     vorpal.ui.redraw(blank)
     vorpal.ui.redraw('')
-    cbk()
+    callback()
   })
 
 /**
