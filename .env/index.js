@@ -3,6 +3,9 @@
 const vorpal = require('vorpal')()
 const shell = require('shelljs')
 
+/**
+ *
+ */
 vorpal
   .command('start')
   .option('--progress')
@@ -14,7 +17,7 @@ vorpal
     callback()
   })
 
-/*
+/**
  *
  */
 vorpal
@@ -29,7 +32,7 @@ vorpal
     cbk()
   })
 
-/*
+/**
  *
  */
 vorpal
