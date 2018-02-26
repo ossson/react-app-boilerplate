@@ -1,12 +1,17 @@
 'use strict';
 
-const path = require('path');
-const htmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path')
+const htmlWebpackPlugin = require('html-webpack-plugin')
+const manifestPlugin = require('webpack-manifest-plugin')
 
 const htmlWebpackPluginConfig = new htmlWebpackPlugin({
   template: './public/index.html',
   filename: 'index.html',
   inject: 'body',
+})
+
+const manifestPluginConfig = new manifestPlugin({
+  // TODO
 })
 
 module.exports = {
@@ -22,11 +27,18 @@ module.exports = {
     ]
   },
   module: {
-    rules: [{
+    rules: [
+      /**
+       *
+       */
+      {
         test: /\.(js|jsx)?$/,
         use: ['babel-loader', 'eslint-loader'],
         exclude: [/[/\\\\]node_modules[/\\\\]/]
       },
+      /**
+       *
+       */
       {
         test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
         loader: 'url-loader',
@@ -35,6 +47,9 @@ module.exports = {
           name: 'static/media/[name].[hash].[ext]',
         }
       },
+      /**
+       *
+       */
       {
         test: /\.css$/,
         exclude: /\.module\.css$/,
@@ -55,5 +70,8 @@ module.exports = {
       modules: false
     }
   },
-  plugins: [htmlWebpackPluginConfig]
+  plugins: [
+    htmlWebpackPluginConfig,
+    manifestPluginConfig
+  ]
 }
