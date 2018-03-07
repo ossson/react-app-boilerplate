@@ -5,7 +5,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin')
 const manifestPlugin = require('webpack-manifest-plugin')
 
 const htmlWebpackPluginConfig = new htmlWebpackPlugin({
-  template: './public/index.html',
+  template: './src/public/index.html',
   filename: 'index.html',
   inject: 'body',
 })
@@ -15,7 +15,7 @@ const manifestPluginConfig = new manifestPlugin({
 })
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js'
