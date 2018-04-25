@@ -1,8 +1,4 @@
-import {
-  rules,
-  extensions,
-  modules
-} from './webpack'
+import { rules, extensions, modules } from './webpack'
 
 export default type => ({
   module: {

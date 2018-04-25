@@ -13,7 +13,7 @@ export default () => {
   if (isDevelopment) {
     plugins.push(
       new webpack.HotModuleReplacementPlugin(),
-      webpack.NoEmitOnErrorsPlugin()
+      new webpack.NoEmitOnErrorsPlugin()
     )
   }
 

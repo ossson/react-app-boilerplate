@@ -10,10 +10,7 @@ export default type => {
   }
 
   if (isDevelopment) {
-    entry.main.push(
-      'webpack-hot-middleware/client',
-      'react-hot-loader/patch'
-    )
+    entry.main.push('webpack-hot-middleware/client', 'react-hot-loader/patch')
   }
 
   entry.main.push('./client.js')
