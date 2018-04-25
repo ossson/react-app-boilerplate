@@ -1,7 +1,4 @@
-import clientConfig from ".env/webpack.config.client"
-import serverConfig from ".env/webpack.config.server"
+import clientConfig from './environment/webpack.config.client'
+import serverConfig from './environment/webpack.config.server'
 
-export default [
-  clientConfig,
-  serverConfig
-]
+export default [clientConfig, serverConfig]
