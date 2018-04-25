@@ -6,7 +6,7 @@ import App from '../app/containers/App'
 import html from './html'
 
 export default function serverRender() {
-  return (req, res, next) => {
+  return (req, res) => {
     const markup = renderToString(<App />)
     res.send(
       html({
