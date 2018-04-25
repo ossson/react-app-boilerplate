@@ -7,7 +7,9 @@ const vorpal = require('vorpal')()
  */
 vorpal
   .command('serve')
-  .allowUnknownOptions()
+  .action(function () {
+    console.log('Error: No hay procedimiento!')
+  })
 
 /**
  *
