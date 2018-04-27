@@ -9,7 +9,7 @@ import {
   output,
   plugins,
   target
-} from './webpack'
+} from './config'
 
 const type = 'server'
 
