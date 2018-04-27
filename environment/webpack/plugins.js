@@ -6,7 +6,7 @@ const isDevelopment = process.env.NODE_ENV !== 'production'
 export default () => {
   const plugins = [
     new ExtractTextPlugin({
-      filename: '../../public/css/style.css'
+      filename: '../../static/css/styles.css'
     })
   ]
 
