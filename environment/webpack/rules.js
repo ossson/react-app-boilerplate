@@ -16,10 +16,7 @@ export default type => {
       test: /\.scss$/,
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
-        use: [
-          'css-loader?minimize=true&modules=true&localIdentName=[name]__[local]',
-          'scss-loader'
-        ]
+        use: ['css-loader?minimize=true', 'sass-loader']
       })
     })
   } else {
@@ -27,8 +24,8 @@ export default type => {
       test: /\.scss$/,
       use: [
         'style-loader',
-        'css-loader?minimize=true&modules=true&localIdentName=[name]__[local]',
-        'scss-loader'
+        'css-loader?minimize=true',
+        'sass-loader'
       ]
     })
   }
