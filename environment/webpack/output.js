@@ -11,7 +11,7 @@ export default type => {
 
   return {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, '../../public/app'),
-    publicPath: '/app/'
+    path: path.resolve(__dirname, '../../public/static/js'),
+    publicPath: '/static/js/'
   }
 }
