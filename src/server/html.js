@@ -2,7 +2,7 @@ export default function html(options) {
   const {
     app = 'main',
     title = 'react-app-boilerplate',
-    stylesheet = '/css/styles.js',
+    stylesheet = '/static/css/styles.css',
     markup
   } = options
 
@@ -20,7 +20,7 @@ export default function html(options) {
       </head>
       <body>
         <div id="root">${markup}</div>
-        <script src="/app/${app}.bundle.js"></script>
+        <script src="/static/js/${app}.bundle.js"></script>
       </body>
     </html>
   `
