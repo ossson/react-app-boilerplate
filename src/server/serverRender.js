@@ -1,17 +1,24 @@
 import React from 'react'
 import { renderToString } from 'react-dom/server'
 
-import App from '../app/containers/App'
-
 import html from './html'
+import App from '../app/App'
 
 export default function serverRender() {
   return (req, res) => {
-    const markup = renderToString(<App />)
-    res.send(
-      html({
-        markup
-      })
+    const context = {}
+    const markup = renderToString(
+      <App server location={req.url} context={context} />
     )
+
+    if (context.url) {
+      res.redirect(301, context.url)
+    } else {
+      res.send(
+        html({
+          markup
+        })
+      )
+    }
   }
 }
