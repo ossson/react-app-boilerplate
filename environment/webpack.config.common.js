@@ -7,5 +7,6 @@ export default type => ({
   resolve: {
     extensions: extensions(),
     modules: modules()
-  }
+  },
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development'
 })
