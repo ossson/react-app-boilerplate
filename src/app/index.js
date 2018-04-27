@@ -1,14 +1,15 @@
+/** @flow */
+
 import 'babel-polyfill'
 import React from 'react'
 import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 
-import App from './containers/App'
-import './styles.scss'
+import App from './App'
 
-const rootElement = document.getElementById('root')
+const rootElement: HTMLElement = document.getElementById('root')
 
-const renderApp = Component => {
+const renderApp: void = Component => {
   render(
     <AppContainer>
       <Component />
@@ -20,7 +21,7 @@ const renderApp = Component => {
 renderApp(App)
 
 if (module.hot) {
-  module.hot.accept('./containers/App', () => {
-    renderApp(require('./containers/App').default)
+  module.hot.accept('./App', () => {
+    renderApp(require('./App').default)
   })
 }
